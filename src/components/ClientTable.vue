@@ -1,6 +1,7 @@
 <template>
     <main>
         <div>
+            <h1>Liste des Clients</h1>
             <DataTable :value="data.listeClients" paginator :rows="5" tableStyle="min-width: 50rem">
                 <Column field="code" header="Code" style="width: 25%"></Column>
                 <Column field="societe" header="Société" style="width: 25%"></Column>
@@ -39,20 +40,3 @@ function chargeClients() {
 onMounted(chargeClients);
 
 </script>
-
-
-<style scoped>
-td,
-th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #232623;
-    color: rgb(255, 255, 255);
-}
-</style>
